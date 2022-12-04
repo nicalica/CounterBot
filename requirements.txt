@@ -1,0 +1,13 @@
+Flask == 0.12.2
+keras
+numpy
+nltk
+scikit-learn
+h5py
+tensorflow
+typing
+transformers
+csv
+re
+googleapiclient
+pickle
