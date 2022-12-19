@@ -1,0 +1,5 @@
+gramformer @ git+https://github.com/PrithivirajDamodaran/Gramformer.git
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+flask==2.2.2
+torch==1.11.0
+transformers==4.25.1
