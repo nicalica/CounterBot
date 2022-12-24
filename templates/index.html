@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>CounterBot</title>
   </head>
   <body>
-    <h1>Counterbot Demo</h1>
+    <h1>CounterBot Demo</h1>
     <h3>A web implementation of <a href="https://github.com/nicalica/counterbot">CounterBot</a> using Flask.</h3>
+    <div id="description">
+      <details>
+        <summary>Sample hate speech</summary>
+        <p>
+          <ul>
+            <li>Muslims are all terrorists</li>
+            <li>Jews are stingy and only care about money</li>
+            <li>Damn feminists trying to take over the world. Can't women just accept their place?</li>
+          </ul>
+        </p>
+      </details>
+    </div>
     <div>
       <div id="chatbox">
-        <p class="botText"><span>Hi! I'm Counterbot.</span></p>
+        <p class="botText"><span>Hi! I'm CounterBot.</span></p>
       </div>
       <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="Message">
+          <label for="textInput"></label><input id="textInput" type="text" name="msg" placeholder="Message">
         <input id="buttonInput" type="submit" value="Send">
       </div>
       <script>
@@ -29,12 +42,12 @@
           });
         }
         $("#textInput").keypress(function(e) {
-            if ((e.which == 13) && document.getElementById("textInput").value != "" ){
+            if ((e.which === 13) && document.getElementById("textInput").value !== "" ){
                 getBotResponse();
             }
         });
         $("#buttonInput").click(function() {
-            if (document.getElementById("textInput").value != "") {
+            if (document.getElementById("textInput").value !== "") {
                 getBotResponse();
             }
         })
